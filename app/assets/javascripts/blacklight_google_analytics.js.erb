@@ -63,7 +63,7 @@ $(function () {
  
   
   //facet expand/collapse
-  $('#facets h3').live('click', function(){
+  $('#facets').on('click', 'h3', function(){
     var label = $(this).text();
     var heading_values = ['facets', 'collapse_expand', label];
     try{
