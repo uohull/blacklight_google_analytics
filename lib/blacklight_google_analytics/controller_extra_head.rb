@@ -3,7 +3,7 @@ module BlacklightGoogleAnalytics
     extend ActiveSupport::Concern
     included do
       before_filter do |controller|
-        controller.extra_head_content << render_to_string(:partial => '/layouts/google_analytics')
+        controller.content_for :head, render_to_string(:partial => '/layouts/google_analytics')
       end
     end
   end
